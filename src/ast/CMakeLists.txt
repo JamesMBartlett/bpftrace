@@ -18,6 +18,7 @@ add_library(ast
   passes/codegen_llvm.cpp
   passes/node_counter.cpp
 )
+add_dependencies(ast parser)
 set_target_properties(ast PROPERTIES PUBLIC_HEADER "attachpoint_parser.h;async_event_types.h;pass_manager.h;irbuilderbpf.h;visitors.h;vtable.h")
 
 install(TARGETS ast_defs ast
